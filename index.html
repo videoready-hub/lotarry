@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- index.html বা head সেকশনে দিন -->
+    <meta property="og:title" content="আমি লটারি জেতার সুযোগ পেয়েছি! ফ্রিতে লটারি নেয়া যাচ্ছে কোন টাকা লাগেনা! দেখো:">
+    <meta property="og:description" content="তুমিও সুযোগ পেতে পারো — এখনই ক্লিক করো!">
+    <meta property="og:image" content="https://www.yamaha-motor-india.com/theme/v4/images/webp_images/r_series_all/r15v4/color/magenta.webp">
+    <meta property="og:url" content="https://free-lottery-win.netlify.app/">
+    <title>আজকের লটারি - শেয়ার করে পুরস্কার জিতুন!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Noto Sans Bengali", sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .textA {
+            font-size: 13px;
+            text-align: justify; /* For Edge */
+            -moz-text-align-last: center; /* For Firefox prior 58.0 */
+            text-align-last: center;
+        }
+
+        
+        h1,
+        h2 {
+            text-align: center;
+            color: #1a73e8;
+        }
+        
+        .prizes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+        }
+        
+        .prize {
+            background: #e3f2fd;
+            color: #111827;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 3px 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            flex-direction: row-reverse; /* ✅ ডান পাশে ইমেজ, বামে টেক্সট */
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .prize img {
+            width: 58px;
+            height: 58px;
+            margin-left: 10px;
+        }
+        
+
+        .btn-main {
+            display: block;
+            width: 94%;
+            max-width: 94%;
+            margin: 15px 0;
+            padding: 14px;
+            border: none;
+            background: linear-gradient(45deg, #ff9800, #ffb74d);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .btn-main22 {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            margin: 15px 0;
+            padding: 14px;
+            border: none;
+            background: linear-gradient(45deg, #ff9800, #ffb74d);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .btn-main33 {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            margin: 15px 0;
+            padding: 14px;
+            border: none;
+            background: linear-gradient(45deg, #ff9800, #ffb74d);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .form-section input,
+        .form-section select {
+            padding: 10px;
+            margin: 8px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        
+        .btn-main:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-main2:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-main3:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-section {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+            margin-top: 20px;
+        }
+
+        .form-section {
+            display: none;
+            margin: auto;
+            max-width: 94.5%;
+            width: 94.5%;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .confirmation-section {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1px;
+            width: 90%;
+            max-width: 90%;
+            margin: 8px 0;
+            padding: 14px 20px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 999px;
+            transition: transform 0.3s;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .share-btn1 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1px;
+            width: 100%;
+            max-width: 100%;
+            margin: 8px 0;
+            padding: 14px 20px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 999px;
+            transition: transform 0.3s;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .share-btn img {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .share-btn1 img {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+  
+        .share-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .share-btn1:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp {
+            background: linear-gradient(to right, #1c9e01, #d0fc0a); /* pink gradient */
+        }
+        
+        .messenger {
+            background: linear-gradient(to right, #1809f39c, #f005a1c5); /* blue-purple gradient */
+        }
+        
+        .copy {
+            background: linear-gradient(to right, #807a7a, #63a1a1);
+            color: white;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        
+        .timer {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            color: #e53935;
+        }
+        
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .btn-main {
+                font-size: 16px;
+                padding: 12px;
+            }
+            .btn-main3 {
+                font-size: 16px;
+                padding: 12px;
+            }
+            .btn-main3 {
+                font-size: 16px;
+                padding: 12px;
+            }
+            input {
+                font-size: 16px;
+            }
+            .timer {
+                font-size: 16px;
+            }
+        }
+
+        .comment img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .comment-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .comment-content span {
+            font-weight: bold;
+            display: block;
+        }
+        
+        .writecomment {
+            font-size: 12px;
+            color: #555252;
+        }
+        
+        .comment-time {
+            font-size: 10px;
+            color: #91888b;
+        }
+        
+        .fake-comments {
+            position: relative;
+            min-height: 170px; /* পরিবর্তে height না দিয়ে min-height দিন */
+            overflow: hidden;
+            margin-bottom: -20px; /* add-comment এর সাথে সমান গ্যাপ */
+        }
+        
+        .comment {
+            display: none;
+            background: #f1f7fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            gap: 10px;
+            transition: all 0.5s ease;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+        
+        .comment.active {
+            display: flex;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+        
+        .like-btn {
+            background: transparent;
+            border: none;
+            color: #91888b;
+            font-size: 10px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .like-btn:hover {
+            background: #fcd4d8;
+        }
+        
+        .reply-btn {
+            background: transparent;
+            border: none;
+            color: #91888b;
+            font-size: 10px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0px;
+        }
+        
+        .reply-btn:hover {
+            background: #c3d7fa;
+        }
+     
+        .add-comment {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .writeyourcomment {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        
+        .postnow {
+            background-color: #1877f2;      /* Facebook blue */
+            color: white;
+            border: none;
+            padding: 1px 16px;              /* আগে যদি 10px 18px ছিল → কমিয়ে দিচ্ছি */
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 550;               /* কম ওয়েট (700 নয়) */
+            cursor: pointer;
+            box-shadow: none;               /* অতিরিক্ত হেভি না দেখানোর জন্য */
+            transition: background-color 0.3s;
+        }
+
+        #topNotification {
+          position: fixed;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #fff;
+          color: #333;
+          padding: 10px 16px;
+          border-radius: 14px;
+          font-size: 12px;
+          font-weight: 500;
+          z-index: 9999;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          max-width: 350px;
+          animation: fadeInOut 6s ease-in-out forwards;
+          border-left: 4px solid #1a73e8;
+          cursor: pointer;
+          animation: fadeInOut 10s ease-in-out forwards;
+        }
+
+        #topNotification img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        #notifText {
+          flex: 1;
+          line-height: 1.2;
+        }
+
+        .cta-btn {
+          display: inline-block;
+          background: #1a73e8;
+          color: white;
+          padding: 6px 12px;
+          border-radius: 6px;
+          text-decoration: none;
+          margin-top: 6px;
+          font-size: 12px;
+        }
+        .cta-btn:hover {
+          background: #0c59c4;
+        }
+
+
+        @keyframes fadeInOut {
+          0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-40px);
+          }
+          10%, 90% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+          }
+          100% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-40px);
+          }
+        }
+
+        .fb-stats {
+          background: #fff;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          padding: 10px;
+          margin-bottom: 15px;
+          font-family: Arial, sans-serif;
+        }
+        .fb-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 10px;
+          color: #555;
+        }
+        .reaction-icon {
+          width: 10px;
+          margin-right: -5px;
+        }
+        .stats-right span {
+          margin: 0 0px;
+          margin-right: 5px;
+        }
+        .icon {
+          width: 12px;
+          vertical-align: middle;
+        }
+        .icon2 {
+          width: 18px;
+          vertical-align: middle;
+        }
+        .fb-actions {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 5px;
+          padding-top: 5px;
+          font-weight: bold;
+          color: #555;
+          font-size: 14px;
+          cursor: pointer;
+        }
+        .action {
+          position: relative;
+        }
+        .reactions {
+          position: absolute;
+          bottom: 30px;
+          background: white;
+          padding: 5px;
+          border-radius: 20px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+          display: none;
+          gap: 5px;
+          font-size: 15px;
+          white-space: nowrap;
+        }
+        .like-hover:hover .reactions {
+          display: flex;
+          animation: popUp 0.2s ease;
+        }
+        @keyframes popUp {
+          from { transform: scale(0.5); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+        #liveViews {
+          font-size: 10px;
+          margin-top: 10px;
+          color: #312f2f;
+          text-align: center;
+        }
+        #floatingNotify {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #fefefe;
+          padding: 10px 20px;
+          border-radius: 30px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+          display: none;
+          font-size: 10px;
+          font-weight: bold;
+          color: #020202;
+          z-index: 9999;
+        }
+        #likeCountText {
+          font-weight: bold;
+        }
+
+        #taskProofForm input,
+        #taskProofForm textarea {
+          transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        #taskProofForm input:focus,
+        #taskProofForm textarea:focus {
+          border: 1px solid #1a73e8;
+          box-shadow: 0 0 5px rgba(26, 115, 232, 0.4);
+          outline: none;
+        }
+
+        .task-submit-section {
+          max-width: 500px;
+          margin: 30px auto;
+          background: #ffffff;
+          padding: 25px;
+          border-radius: 20px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🏆 আজকের লটারি অফার</h1>
+        <p style="text-align: center">শেয়ার করে জিতে নিন চমৎকার পুরস্কার!</p>
+
+        <div class="prizes">
+            <div class="prize"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhwyl-WewF_yKQ8FkosBY0l-iOtVBMOYxpKCdCRJAW8f3ThJv7z9nUfQi27-ZJWFyX4n_vUeEmZEQJ0uMJGUw0bFsuZ6DjkJXr7Tb5_ZokkdQAOl5DAFE9NucZ_UsuhmXzXW5AE5iwgZQair-5lKE6gh1Somk2hzsmRMAeNEgmOlvNxQ8CGvOrcDyHG6M/s320/bike2-removebg-preview.png" alt="Motorbike" />Yamaha R15 V4</div>
+            <div class="prize"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3uxgFUs_jZ-0Jmk9iErpBWTCpQEcTBVk57XS5tJpVUjfE26961LJO0VAkFlnschn82t4UDUQN29fX5D42bmINwY7YeFpNSozJ1fuF_QOSrp1_N4GwEVZtKu4t6B3KtS2YMOsxYXdCTF9EQT3UGhRB0TbhkreK7Qi24n1bsYL9Msx4Wno2ZGVZstnalqw/s320/leptop-removebg-preview.png" alt="Leptop" />Brand new laptop</div>
+            <div class="prize"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzUtjRJNMsJtyMKU7BpjR1bPDti3uEx4HVLpaEHXsmjDUWBs6XqlBX1W0nH8gN0ASM9UZxjUGk9PL6t3Zd__lbVWhodvJTBYl9eb_UlbJvC6b_EMgZ2X-88EqqeLY3_VJX85YONfNNhsP4oiA5HHNMjYvmNKBKSXkNAVeOI4z8ZwQIyq8z6yFBlbtXDZ4/s320/phone-removebg-preview.png" alt="Phone" />Samsung S24 Ultra</div>
+            <div class="prize"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXEFwRdzBFdcQDuxp4PMOdoXrvFxndz0AhnlZ7vhmohJjgufgLfTXKerQ4KHlinh2gG_rh8XmfJtH-iS58taOUdVWq2uipvNIZrrgQP5xl3Gef72o6tpQR81MgGoGGCHWWNFfq6F59VeT8edLPLTAOmAvp-oDdeg9gJfXGt1yAYnfQosIYvNl7JoiSQRI/s320/money-removebg-preview.png" alt="Money" />125 USD hand cash</div>
+        </div>
+
+        <div class="timer" id="timer">🕘 অফার শেষ হতে বাকি: 100:00 মিনিট</div>
+        <p style="text-align:center; font-weight: bold; color: green; margin-top: 10px;">
+          ✅ ১০,১৫০+ ব্যবহারকারী ইতিমধ্যেই জয়ী হয়েছেন!
+        </p>
+
+
+        <a class="btn-main" href="fb-messenger://share?link=https://free-lottery-win.netlify.app/" id="shareBtn" onclick="shareMessenger()">🎁 লটারি জিততে শেয়ার করুন</a>
+
+      <div class="share-section hidden" id="shareSection">
+        <h2>✅ শেয়ার করুন 🤝</h2>
+        <h3>লটারি ক্লেইম করতে সর্বনিম্ন ১৩ জন বন্ধু বা ৩টি গ্রুপে শেয়ার করুন:</h3>
+        <p class="textA"><b style="color: red;">✱</b> যেখানেই শেয়ার করেন, শেয়ার করা সম্পূর্ণ হলে একটি স্ক্রিনশট নিয়ে রাখবেন, স্ক্রিনশটটি আপনাকে জমা দিতে হবে। স্ক্রিনশটের অপশনটি আপনাকে সবার লাস্টে প্রোভাইড করা হবে, সেই সময় আপনাকে এই স্ক্রিনশটটি জমা দিতে হবে।</p>
+        <p class="textA"><b><u>বিশেষ দ্রষ্টব্য:</u></b> প্রিয় গ্রাহক, এই আবেদন প্রক্রিয়াটি সম্পূর্ণ করতে আমরা আপনাকে বিনীত অনুরোধ করতেছি যে, এই অফারটি আপনি আপনার বন্ধুদের কাছে শেয়ার করবেন অন্যথায় আপনার আবেদন প্রক্রিয়াটি গ্রহণযোগ্য হবে না, ধন্যবাদ।</p>
+
+        <a class="share-btn messenger" href="fb-messenger://share?link=https://free-lottery-win.netlify.app/" target="_blank" onclick="shareMessenger(); countShare();"><img src="https://img.icons8.com/?size=100&id=VFMgSms8GmnV&format=png&color=000000" alt="Messenger" /><span>Messenger</span></a>
+
+        <a class="share-btn whatsapp" href="#" target="_blank" onclick="shareWhatsApp(); countShare();"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" /><span>WhatsApp</span></a>
+
+        <button class="share-btn1 copy" onclick="copyLink()"><img src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="Copy" /><span>Copy Link</span></button>
+
+        <button class="btn-main22" onclick="showForm()">✅ আমি শেয়ার করেছি</button>
+      </div>
+
+      <div class="form-section" id="formSection">
+        <h2>📝 আপনার তথ্য দিন</h2>
+
+        <select id="country" onchange="updateCountryCode()">
+          <option value="+93">Afghanistan (+93)</option>
+          <option value="+213">Algeria (+213)</option>
+          <option value="+374">Armenia (+374)</option>
+          <option value="+61">Australia (+61)</option>
+          <option value="+880" selected>Bangladesh (+880)</option>
+          <option value="+975">Bhutan (+975)</option>
+          <option value="+591">Bolivia (+591)</option>
+          <option value="+55">Brazil (+55)</option>
+          <option value="+673">Brunei Darussalam (+673)</option>
+          <option value="+359">Bulgaria (+359)</option>
+          <option value="+855">Cambodia (+855)</option>
+          <option value="+1">Canada (+1)</option>
+          <option value="+56">Chile (+56)</option>
+          <option value="+57">Colombia (+57)</option>
+          <option value="+243">Congo, The Democratic Republic of the (+243)</option>
+          <option value="+385">Croatia (+385)</option>
+          <option value="+20">Egypt (+20)</option>
+          <option value="+503">El Salvador (+503)</option>
+          <option value="+251">Ethiopia (+251)</option>
+          <option value="+33">France (+33)</option>
+          <option value="+995">Georgia (+995)</option>
+          <option value="+49">Germany (+49)</option>
+          <option value="+504">Honduras (+504)</option>
+          <option value="+91">India (+91)</option>
+          <option value="+62">Indonesia (+62)</option>
+          <option value="+964">Iraq (+964)</option>
+          <option value="+39">Italy (+39)</option>
+          <option value="+81">Japan (+81)</option>
+          <option value="+962">Jordan (+962)</option>
+          <option value="+254">Kenya (+254)</option>
+          <option value="+82">Korea, Republic of (+82)</option>
+          <option value="+965">Kuwait (+965)</option>
+          <option value="+961">Lebanon (+961)</option>
+          <option value="+218">Libya (+218)</option>
+          <option value="+265">Malawi (+265)</option>
+          <option value="+60">Malaysia (+60)</option>
+          <option value="+960">Maldives (+960)</option>
+          <option value="+356">Malta (+356)</option>
+          <option value="+222">Mauritania (+222)</option>
+          <option value="+230">Mauritius (+230)</option>
+          <option value="+52">Mexico (+52)</option>
+          <option value="+212">Morocco (+212)</option>
+          <option value="+95">Myanmar (+95)</option>
+          <option value="+977">Nepal (+977)</option>
+          <option value="+31">Netherlands (+31)</option>
+          <option value="+234">Nigeria (+234)</option>
+          <option value="+968">Oman (+968)</option>
+          <option value="+92">Pakistan (+92)</option>
+          <option value="+507">Panama (+507)</option>
+          <option value="+675">Papua New Guinea (+675)</option>
+          <option value="+63">Philippines (+63)</option>
+          <option value="+7">Russia (+7)</option>
+          <option value="+966">Saudi Arabia (+966)</option>
+          <option value="+27">South Africa (+27)</option>
+          <option value="+34">Spain (+34)</option>
+          <option value="+46">Sweden (+46)</option>
+          <option value="+41">Switzerland (+41)</option>
+          <option value="+66">Thailand (+66)</option>
+          <option value="+90">Turkey (+90)</option>
+          <option value="+1">USA (+1)</option>
+          <option value="+256">Uganda (+256)</option>
+          <option value="+380">Ukraine (+380)</option>
+          <option value="+971">United Arab Emirates (+971)</option>
+          <option value="+44">United Kingdom (+44)</option>
+          <option value="+598">Uruguay (+598)</option>
+          <option value="+998">Uzbekistan (+998)</option>
+          <option value="+58">Venezuela (+58)</option>
+          <option value="+84">Vietnam (+84)</option>
+          <option value="+260">Zambia (+260)</option>
+          <option value="+263">Zimbabwe (+263)</option>
+        </select>
+
+        <input type="text" placeholder="Write your name" id="name" />
+
+        <div style="display: flex;">
+          <input type="text" id="countryCode" value="+880" readonly style="width: 60px;" />
+          <input type="tel" placeholder="Write your phone number" id="phone" style="flex: 1;" />
+        </div>
+
+        <button class="btn-main33" onclick="showConfirmation()">✅ কনফার্ম করুন</button>
+      </div>
+
+
+      <div class="confirmation-section" id="confirmationSection">
+        <h2>🎉 অভিনন্দন!</h2>
+        <p>
+          <h3>আপনার লটারি রেজিস্ট্রেশন সফল হয়েছে। নিচের বাটনে ক্লিক করে আপনার লটারি
+            সংগ্রহ করুন।</h3>
+            <h5 class="textA">এখন আপনার আবেদনের প্রক্রিয়াটি শেষ পর্যায়ে, এই সময়ে আপনাকে সর্বশেষ ধাপটি অত্যন্ত মনোযোগ দিয়ে করতে হবে। <mark>✅ এখনই লটারি সংগ্রহ করুন</mark> এই বাটনে ক্লিক করে লটারি সংগ্রহ করতে পারবেন।</h5>
+            <p class="textA"><b style="color: red;">✱</b> লটারি সংগ্রহের জন্য আপনি যে টাস্কটি করবেন সেটি সম্পূর্ণ করা হলে একটি স্ক্রিনশট নিয়ে রাখবেন, সেই স্ক্রিনশটটি আপনাকে জমা দিতে হবে।</p>
+            <p class="textA"><b><u>বিশেষ দ্রষ্টব্য:</u></b> আমরা অত্যন্ত আনন্দের সাথে বলতেছি যে ৭২ ঘন্টা পরপর এই অফারটি বিজয়ীদের পুরস্কার প্রকাশ করে থাকে। 
+              সুতরাং আপনি নিরাশ হবেন না। আপনি এই আবেদনটি পুনরাই করতে পারবেন, ধন্যবাদ।</p>
+        </p>
+        <a href="#" onclick="delayedUnlockWithNotice('https://otieu.com/4/9972345', 'adsterra1')" class="btn-main">✅ এখনই লটারি সংগ্রহ করুন</a>
+      </div>
+
+      <div id="adsterra1" style="display: none; text-align: center; margin-top: 20px;">
+        <p>❌Sorry try again!</p>
+        <p style="font-size: 14px;">দুঃখিত, আপনি উপরের অপশন থেকে লটারি সংগ্রহ করতে ব্যর্থ  হয়েছেন, আবার সংগ্রহ করুন নিচের অপশন থেকে।</p>
+        <a href="#" onclick="delayedUnlockWithNotice('https://otieu.com/4/9678385', 'taskProofForm')" class="btn-main" style="background: linear-gradient(45deg, #3ab744, #92f559);">🎯 এখান থেকে আবার সংগ্রহ করুন</a>
+      </div>
+      
+
+
+      <div id="ad-instruction" style="background: rgba(0, 0, 0, 0.85); display: none; height: 100%; left: 0px; padding-top: 80px; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 9999;">
+        <div style="background: #191970; border-radius: 10px; margin: auto; max-width: 500px; padding: 25px;">
+          <h1 style="color: #FFFFFF;"><b>🏆 লটারি সংগ্রহ করার নিয়ম</b></h1>
+          <p style="color: #FFFFFF; font-size: 15px; text-align: justify; -moz-text-align-last: center; text-align-last: center;"><strong>এখন আপনাকে একটি পেজ বা ওয়েবসাইট দেওয়া হবে। সেখানে আপনাকে একটি টাস্ক দেওয়া হবে, যেমন: Sign-up/Registration / Download / Website visit ইত্যাদি বা এর বাহিরে অন্য কিছুও থাকতে পারে। এটা পরিপূর্ণভাবে করতে পারলেই আপনার লটারিটি গ্রহণ করা হবে।</strong></p>
+          <p style="color: #FFFFFF; font-size: 13px; text-align: justify; -moz-text-align-last: center; text-align-last: center;"><strong><b style="color: red;">✱</b> লটারি সংগ্রহের জন্য আপনি যে টাস্কটি সম্পূর্ণ করবেন সেটি করা হলে একটি স্ক্রিনশট নিয়ে রাখবেন, সেই স্ক্রিনশটটি আপনাকে জমা দিতে হবে।</strong></p>
+          <button id="continue-btn" style="background-color: #f57c00; border-radius: 8px; border: none; color: white; cursor: pointer; font-weight: bold; margin-top: 20px; padding: 10px 15px;">✅ আমি বুঝেছি, চলুন</button><br />
+          <button onclick="closePopup()" style="background-color: #eb2d53; border-radius: 5px; border: none; color: white; font-size: 13px; margin-top: 10px; padding: 5px 15px;">Cancel</button>
+        </div>
+      </div>
+
+
+      
+      <!-- Facebook-style Reaction & Counter UI Start -->
+      <div class="fb-stats">
+        <div class="fb-top">
+          <div class="likes">
+            <img src="https://cdn.worldvectorlogo.com/logos/facebook-reaction-like.svg" class="reaction-icon" />
+            <img src="https://cdn.worldvectorlogo.com/logos/facebook-reaction-love.svg" class="reaction-icon" />
+            <img src="https://w7.pngwing.com/pngs/106/526/png-transparent-wow-emoji-world-of-warcraft-emoji-emoticon-facebook-emoji-smiley-snout-circle-thumbnail.png" class="reaction-icon" />
+            <span id="likeCountText">
+              <span id="likeCount">267380</span>
+            </span>
+          </div>
+          <div><p id="liveViews">👁️ Live <span id="viewerCount">3945</span> Views</p></div>
+          <div class="stats-right">
+            <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" class="icon" />
+            <span id="commentCount">30478</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/8032/8032502.png" class="icon" />
+            <span id="shareCount">786398</span>
+          </div>
+        </div>
+        <hr />
+        <div class="fb-actions">
+          <div class="action like-hover" id="mainLikeBtn">
+            <img src="https://cdn.worldvectorlogo.com/logos/fb-like.svg" class="icon2" /> <span id="likeText">Like</span>
+            <div class="reactions">
+              <span>👍</span>
+              <span>❤️</span>
+              <span>😮</span>
+            </div>
+         </div>
+
+          <div class="action">
+            <img src="" class="icon2" />💬Comment
+          </div>
+          <div class="action">
+            <img src="https://cdn-icons-png.flaticon.com/512/8032/8032502.png" class="icon2" />Share
+          </div>
+        </div>
+      </div>
+      <div id="floatingNotify">Tanvir just liked this❤️</div>
+      <!-- Facebook-style Reaction & Counter UI End -->
+
+
+      <div class="fake-comments" id="fakeComments">
+        <h3>🗨️ ব্যবহারকারীদের মন্তব্য</h3>
+
+        <div class="comment">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="profile" />
+          <div class="comment-content">
+            <span>সাবিনা আক্তার</span>
+            <span class="writecomment">খুব সহজে আমি ২৫০০ টাকা জিতেছি। ধন্যবাদ লটারি টিমকে!</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">3</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">2m ago</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment">
+          <img src="https://media.licdn.com/dms/image/v2/C4E1BAQFEUpYYwWZeIA/company-background_10000/company-background_10000/0/1583902611873/american_public_health_association_cover?e=2147483647&v=beta&t=-ie9SXLCnM1rpO7EjYiTeWJHPcOfl6-LP4JXOyYJ3P0" alt="profile" />
+          <div class="comment-content">
+            <span>Ayaana</span>
+            <span class="writecomment">मैं भारतीय हूँ। क्या मैं यह लॉटरी जीतने का पात्र हूँ?</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">7</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">3m ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img src="https://shotkit.com/wp-content/uploads/bb-plugin/cache/cool-profile-pic-matheus-ferrero-landscape-6cbeea07ce870fc53bedd94909941a4b-zybravgx2q47.jpeg" alt="profile" />
+          <div class="comment-content">
+            <span>Samiya</span>
+            <span class="writecomment">আমি বিশ্বাসই করতে পারছি না! সত্যিই কাজ করে।</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">14</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">5m ago</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8qwbA7TsjqN_pj7srVvbiMoEq55GJhb9w51nZkTy77SzshwrdTnS5gUjLxxYsSllbOds&usqp=CAU" alt="profile" />
+          <div class="comment-content">
+            <span>তানভীর মাহমুদ</span>
+            <span class="writecomment">আমি ৩০ জন বন্ধু ইনভাইট করে লটারি জিতেছি😍 আমার মনে হয় বেশি বেশি শেয়ার করলে এবং সম্পূর্ণ প্রসেসটি ঠিক মতো করে জমা দিলে জিতার সম্ভাবনা ৯০% থাকে!</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">27</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">11m ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img src="https://www.shutterstock.com/image-photo/handsome-happy-african-american-bearded-600nw-2460702995.jpg" alt="profile" />
+          <div class="comment-content">
+            <span>Theodore</span>
+            <span class="writecomment">I am American. Will I be eligible to win this lottery?</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">67</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">19m ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img src="https://img.freepik.com/free-photo/smiling-girl-with-american-flag-nature_23-2147824508.jpg?semt=ais_hybrid&w=740&q=80" alt="profile" />
+          <div class="comment-content">
+            <span>Isabella</span>
+            <span class="writecomment">It has spread all over the world. A close friend of mine won a prize from this lottery.</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">81</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">23m ago</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment">
+          <img src="https://ulab.edu.bd/sites/default/files/images/faculty/Fatema-Khan.jpg" alt="profile" />
+          <div class="comment-content">
+            <span>Fatema</span>
+            <span class="writecomment">টাকা দিয়ে কোন জায়গায় লটারি জিততে পারি নাই এবার দেখি ফ্রিতে জিততে পারি কিনা!</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">142</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">43m ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img src="https://media.licdn.com/dms/image/v2/C5603AQE9I-ej88hl4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1629300538468?e=2147483647&v=beta&t=q1IHemeq2VAT15fQPfavLqDx1XJsz2pYz7F6d6kadno" alt="profile" />
+          <div class="comment-content">
+            <span>Abdullah</span>
+            <span class="writecomment">স্বপ্ন ছিল বাইক চালাবো গ্রামের রাস্তাতে কিন্তু এই স্বপ্ন আর পূরণ হবে না কারণ আমি ইউএসএর ভিসা পেয়েছি 😥</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">687</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">4hr ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <img src="https://loop.frontiersin.org/images/profile/701103/203" alt="profile" />
+          <div class="comment-content">
+            <span>Mamun</span>
+            <span class="writecomment">নিরস্ত্র হবই না চেষ্টা বাড়াবাড়ি চালিয়ে যাব দেখি কপালে কি থাকে। যদি না জিততে পারি তাহলে বাড়াবাড়ি ফর্ম পূরণ করে জমা দিব যতক্ষণ প্রাইস না পাবো💪</span>
+            <div class="comment-actions">
+              <button class="like-btn">Like <span class="like-count">1162</span></button>
+              <button class="reply-btn">Reply</button>
+              <div class="comment-time">1d ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="add-comment">
+        <input class="writeyourcomment" type="text" placeholder="Write your comments..." id="newComment"/>
+        <button class="postnow" onclick="postComment()">Post now</button>
+      </div>
+    </div>
+
+    <!-- <div style="margin:0 auto; text-align:center; max-width:320px; width:100%;">
+       <script type="text/javascript">
+	          atOptions = {
+		           'key' : '12a6b7d02c7a7790d78769d6c62ba050',
+		           'format' : 'iframe',
+		           'height' : 50,
+		           'width' : 320,
+		           'params' : {}
+	          };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/12a6b7d02c7a7790d78769d6c62ba050/invoke.js"></script>
+    </div> -->
+
+    <audio id="beepSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" preload="auto"></audio>
+
+    <div id="topNotification" onclick="hideNotification()">
+      <img id="notifImg" src="https://yelp.leoafricainstitute.org/wp-content/uploads/2022/05/default-profile-picture1.jpg" alt="user" />
+      <div>
+        <div id="notifText"></div>
+        <a id="notifBtn" href="https://otieu.com/4/9972345" target="_blank" class="cta-btn">Registration</a>
+      </div>
+    </div>
+
+    <!-- 📤 Task Submission Form -->
+    <div class="task-submit-section" id="taskProofForm" style="display: none;">
+      <h2 style="text-align: center; color: #1a73e8;">📸 আপনার টাস্ক সাবমিট করুন</h2>
+      <p style="text-align: center; font-size: 14px; color: #333;">যে কাজগুলো করেছেন সেগুলোর <strong>স্ক্রিনশট</strong> এবং <strong>মন্তব্য</strong> দিন ⬇</p>
+      <form style="display: flex; flex-direction: column; gap: 15px;">
+        <label>
+          <strong>🖼️ স্ক্রিনশট আপলোড করুন:</strong><br />
+          <input type="file" id="screenshotInput" accept="image/*" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;" />
+          <input type="file" id="screenshotInput" accept="image/*" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;" />
+        </label>
+
+        <label>
+          <strong>📝 টাস্ক সম্পর্কে লিখুন:</strong><br />
+          <textarea id="taskText" rows="4" placeholder="যেমন: আমি সফলভাবে সাইন-আপ/রেজিস্ট্রেশন করেছি এবং মেসেঞ্জারে ১৫ জন বন্ধুদের কাছে এটি শেয়ার করেছি..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+        </label>
+
+        <button class="btn-main" onclick="submitTaskProof()" style="background: linear-gradient(45deg, #0aa80a, #07a314);">
+          📤 সাবমিট করুন
+        </button>
+      </form>
+    </div>
+
+
+
+    <script>
+      let shareCount = 0;
+      let timerValue = 6000;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check localStorage flag
+        if (localStorage.getItem("showShareSection") === "true") {
+          document.getElementById("shareSection").style.display = "block";
+        }
+
+        // Handle share button click
+        var shareBtn = document.getElementById("shareBtn");
+        if (shareBtn) {
+          shareBtn.addEventListener("click", function (e) {
+            e.preventDefault(); // prevent default link action
+            // Set flag to show section after return
+            localStorage.setItem("showShareSection", "true");
+            // Open Messenger share link
+            window.open(
+              "https://www.facebook.com/dialog/send?link=https://free-lottery-win.netlify.app/&app_id=603247346192911&redirect_uri=https://free-lottery-win.netlify.app/",
+              "_blank"
+            );
+            // // Optionally reload after few seconds
+            // setTimeout(function () {
+            //   location.reload();
+            // }, 10000);
+            document.getElementById("shareBtn").style.display = "none";
+            document.getElementById("shareSection").style.display = "block";
+          });
+        }
+      });
+
+
+      function countShare() {
+        localStorage.setItem("shareSectionVisible", "true");
+        const section = document.getElementById("shareSection");
+        if (section) {
+          section.style.display = "block"; // রিয়েলটাইম দেখানো
+        }
+      }
+
+      window.addEventListener("load", function () {
+        const isVisible = localStorage.getItem("shareSectionVisible");
+        if (isVisible === "true") {
+          const section = document.getElementById("shareSection");
+          if (section) {
+            section.style.display = "block";
+          }
+        }
+      });
+
+
+      
+
+      let hasShared = false;
+      let shareTimestamp = null; // কখন শেয়ার করেছে
+
+      function countShare() {
+        const timestamp = Date.now();
+        localStorage.setItem("shareSectionVisible", "true");
+        localStorage.setItem("hasShared", "true");
+        localStorage.setItem("shareTimestamp", timestamp.toString());
+
+        const section = document.getElementById("shareSection");
+        if (section) {
+          section.style.display = "block";
+        }
+
+        console.log("✅ শেয়ার টাইম:", new Date(timestamp).toLocaleTimeString());
+      }
+
+
+      function showForm() {
+        const hasShared = localStorage.getItem("hasShared") === "true";
+        const shareTimestamp = parseInt(localStorage.getItem("shareTimestamp") || "0");
+
+        if (!hasShared) {
+          alert("⚠️ আপনি এখনও শেয়ার করেননি, দয়া করে আগে শেয়ার করুন।");
+          return;
+        }
+
+        const currentTime = Date.now();
+        const timeElapsed = (currentTime - shareTimestamp) / 1000; // সেকেন্ডে
+
+        if (timeElapsed < 15) {
+          alert("⏳ আপনার শেয়ারটি এখনো প্রসেসিংয়ে আছে, দয়া করে পরিপূর্ণ করুন।");
+          return;
+        }
+
+        document.getElementById("shareSection").style.display = "none";
+        document.getElementById("formSection").style.display = "block";
+      }
+
+
+
+      function copyLink() {
+        const copyText = "আমি লটারি জেতার সুযোগ পেয়েছি! ফ্রিতে লটারি নেয়া যাচ্ছে কোন টাকা লাগেনা! দেখো: https://free-lottery-win.netlify.app/";
+        const tempInput = document.createElement("input");
+        tempInput.value = copyText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // মোবাইলের জন্য
+  
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        alert("✅ লিংক কপি হয়েছে! এখন শেয়ার করুন আপনার পছন্দের প্লাটফর্মে");
+        countShare(); // শেয়ার কাউন্ট বাড়ানো
+      }
+
+
+      function shareMessenger() {
+        const url = "https://free-lottery-win.netlify.app/";
+        const appId = "603247346192911";
+
+        const messengerWeb = `https://www.facebook.com/dialog/send?link=${encodeURIComponent(url)}&app_id=${appId}&redirect_uri=${encodeURIComponent(url)}`;
+        const messengerApp = `fb-messenger://share?link=${encodeURIComponent(url)}`;
+
+        if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+          window.location.href = messengerApp;
+
+          // fallback 1 সেকেন্ড পর
+          setTimeout(() => {
+            window.open(messengerWeb, "_blank");
+          }, 1000);
+        } else {
+          window.open(messengerWeb, "_blank");
+        }
+      }
+
+
+      function shareWhatsApp() {
+        const text = "আমি লটারি জেতার সুযোগ পেয়েছি! ফ্রিতে লটারি নেয়া যাচ্ছে কোন টাকা লাগেনা, দেখো: https://free-lottery-win.netlify.app/";
+        const encoded = encodeURIComponent(text);
+        const whatsappLink = `https://wa.me/?text=${encoded}`;
+
+        window.open(whatsappLink, "_blank");
+      }
+
+
+      function updateCountryCode() {
+        const selectedCode = document.getElementById("country").value;
+        document.getElementById("countryCode").value = selectedCode;
+      }
+
+      window.onload = updateCountryCode;
+
+      function showConfirmation() {
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const code = document.getElementById("countryCode").value;
+
+        if (name === "" || phone === "") {
+          alert("অনুগ্রহ করে সব তথ্য দিন");
+          return;
+        }
+
+        const fullPhone = code + phone;
+        console.log("Name:", name);
+        console.log("Phone:", fullPhone);
+
+        alert("✅ তথ্য সাবমিট হয়েছে!");
+
+        document.getElementById("formSection").style.display = "none";
+        document.getElementById("confirmationSection").style.display = "block";
+      }
+
+
+
+      function startTimer() {
+        const timerEl = document.getElementById("timer");
+        const interval = setInterval(() => {
+          if (timerValue <= 0) {
+            clearInterval(interval);
+            timerEl.innerText = "🕘 অফারটি শেষ হয়ে গেছে!";
+          } else {
+            const min = Math.floor(timerValue / 60);
+            const sec = timerValue % 60;
+            timerEl.innerText = `🕘 অফার শেষ হতে বাকি: ${
+              min < 10 ? "0" + min : min
+            }:${sec < 10 ? "0" + sec : sec} মিনিট`;
+            timerValue--;
+          }
+        }, 1000);
+      }
+
+      // কমেন্ট সাইকেলিং উন্নত করা হলো
+      function cycleComments() {
+        const container = document.getElementById("fakeComments");
+        const comments = container.querySelectorAll(".comment");
+        let index = 0;
+
+        // প্রথম কমেন্ট দেখানো
+        comments[0].classList.add("active");
+
+        // সকল রিপ্লাই লুকানো
+        document.querySelectorAll(".reply").forEach((reply) => {
+          reply.style.display = "none";
+        });
+
+        window.commentInterval = setInterval(() => {
+          comments[index].classList.remove("active");
+          index = (index + 1) % comments.length;
+          comments[index].classList.add("active");
+
+          // রিপ্লাই সেকশনগুলো লুকানো
+          comments[index].querySelectorAll(".reply").forEach((reply) => {
+            reply.style.display = "none";
+          });
+
+          // রিপ্লাই বাটন টেক্সট রিসেট
+          const replyBtns = comments[index].querySelectorAll(".reply-btn");
+          if (replyBtns.length > 0) {
+            replyBtns.forEach((btn) => {
+              btn.innerText = "Reply";
+            });
+          }
+        }, 5000);
+      }
+
+
+      // লাইক ফাংশন
+      function likeComment(btn) {
+        const countSpan = btn.querySelector(".like-count");
+        let current = parseInt(countSpan.innerText) || 0;
+        countSpan.innerText = current + 1;
+
+        // লাইক বাটনে এনিমেশন যোগ
+        btn.style.transform = "scale(1.2)";
+        setTimeout(() => {
+          btn.style.transform = "scale(1)";
+        }, 300);
+      }
+
+      
+      // নতুন কমেন্ট পোস্ট ফাংশন
+      function postComment() {
+        const commentInput = document.getElementById("newComment");
+        const commentText = commentInput.value.trim();
+
+        if (commentText === "") {
+          alert("অনুগ্রহ করে মন্তব্য লিখুন!");
+          return;
+        }
+
+        const commentsContainer = document.getElementById("fakeComments");
+        const newComment = document.createElement("div");
+        newComment.className = "comment active";
+        newComment.innerHTML = `
+        <img src="https://thumbs.dreamstime.com/b/icon-profile-circle-color-black-background-color-white-icon-profile-circle-color-black-background-color-194699217.jpg" alt="You">
+        <div class="comment-content">
+          <span>You</span>${commentText}
+          <div class="comment-actions">
+            <button class="like-btn">Like <span class="like-count">0</span></button>
+            <button class="reply-btn">Reply</button>
+            <div class="comment-time"> Just now</div>
+          </div>
+        </div>
+        `;
+
+        commentsContainer.insertBefore(
+          newComment,
+          commentsContainer.children[1]
+        );
+        commentInput.value = "";
+
+        // নতুন কমেন্টে ইভেন্ট লিসেনার যোগ
+        newComment
+          .querySelector(".like-btn")
+          .addEventListener("click", function () {
+            likeComment(this);
+          });
+
+        newComment
+          .querySelector(".reply-btn")
+          .addEventListener("click", function () {
+            toggleReply(this);
+          });
+      }
+
+      // ইভেন্ট ডেলিগেশন সেটআপ
+      function setupCommentEvents() {
+        // সকল কমেন্ট ইভেন্ট হ্যান্ডলিং
+        document
+          .getElementById("fakeComments")
+          .addEventListener("click", function (e) {
+            const target = e.target;
+
+            // লাইক বাটন হ্যান্ডলিং
+            if (target.closest(".like-btn")) {
+              const btn = target.closest(".like-btn");
+              const countSpan = btn.querySelector(".like-count");
+              countSpan.textContent = parseInt(countSpan.textContent) + 1;
+            }
+
+            // রিপ্লাই বাটন হ্যান্ডলিং
+            if (target.closest(".reply-btn")) {
+              const btn = target.closest(".reply-btn");
+              const replySection = btn
+                .closest(".comment-content")
+                .querySelector(".reply");
+              replySection.style.display =
+                replySection.style.display === "none" ? "block" : "none";
+              btn.textContent =
+                replySection.style.display === "none"
+                  ? "Reply"
+                  : "✖️ Close";
+            }
+          });
+      }
+
+
+      let redirectURL = '';
+      let unlockTargetID = '';
+
+      // ক্লিক করলে টাইম রেকর্ড + পপআপ
+      function delayedUnlockWithNotice(link, id) {
+        event.preventDefault();
+        redirectURL = link;
+        unlockTargetID = id;
+
+        if (id === "adsterra1") {
+          localStorage.setItem("showAdsterra1", Date.now().toString());
+        } else if (id === "taskProofForm") {
+          localStorage.setItem("showTaskProof", Date.now().toString());
+        }
+
+        document.getElementById("ad-instruction").style.display = "block";
+      }
+
+      // কন্টিনিউ ক্লিক => এডে পাঠিয়ে দিবে
+      document.getElementById('continue-btn').addEventListener('click', function () {
+        document.getElementById('ad-instruction').style.display = 'none';
+        window.open(redirectURL, '_blank');
+      });
+
+      // এই ফাংশন বারবার চেক করবে ১০ সেকেন্ড পার হয়েছে কিনা
+      function checkAndShowAfterDelay(key, elementId, delaySec) {
+        const savedTime = localStorage.getItem(key);
+        if (savedTime) {
+          const elapsed = (Date.now() - parseInt(savedTime, 10)) / 1000;
+          const el = document.getElementById(elementId);
+          if (elapsed >= delaySec && el.style.display !== "block") {
+            el.style.display = "block";
+            window.scrollTo(0, document.body.scrollHeight);
+          }
+        }
+      }
+
+      // Interval দিয়ে বারবার চেক করা হবে
+      setInterval(() => {
+        checkAndShowAfterDelay("showAdsterra1", "adsterra1", 10);
+        checkAndShowAfterDelay("showTaskProof", "taskProofForm", 10);
+      }, 1000); // প্রতি ১ সেকেন্ডে চেক
+
+      // ব্যাক করে আসলে সাথে সাথেই চেক করাও
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+          checkAndShowAfterDelay("showAdsterra1", "adsterra1", 10);
+          checkAndShowAfterDelay("showTaskProof", "taskProofForm", 10);
+        }
+      });
+
+      function closePopup() {
+        document.getElementById('ad-instruction').style.display = 'none';
+      }
+
+
+      
+
+      // ✅ ফাংশন: ফর্ম দেখানো
+      function showTaskProofForm() {
+        const proofForm = document.getElementById("taskProofForm");
+        if (proofForm) {
+          proofForm.style.display = "block";
+          window.scrollTo(0, document.body.scrollHeight); // Scroll নিচে
+        }
+      }
+
+      // ✅ 3. ফর্ম সাবমিশন
+      function submitTaskProof() {
+        const screenshotInput = document.getElementById("screenshotInput");
+        const taskText = document.getElementById("taskText").value.trim();
+
+        if (!screenshotInput.files.length) {
+          alert("⚠️ দয়া করে স্ক্রিনশট আপলোড করুন।");
+          return;
+        }
+
+        if (taskText === "") {
+          alert("⚠️ দয়া করে কিছু লিখুন।");
+          return;
+        }
+
+        alert("✅ ধন্যবাদ! আপনার তথ্য সাবমিট হয়েছে।");
+
+        localStorage.removeItem("lotteryClickedTime"); // Clear storage
+        localStorage.removeItem("showAdsterra1");
+        localStorage.removeItem("showTaskProof");
+        localStorage.removeItem("shareSection");
+        document.getElementById("taskProofForm").reset?.();
+        location.reload();
+      }
+
+
+      const notifMessages = [
+        {
+          name: "সাবিনা আক্তার",
+          text: "I just received 125 USD!",
+          img: "https://randomuser.me/api/portraits/women/21.jpg",
+          link: "https://otieu.com/4/9972345"
+        },
+        {
+          name: "Mamun",
+          text: "🏍️নতুন মোটরসাইকেল পেয়েছি ভাই! এখনই সংগ্রহ করুন 100% Win",
+          img: "https://loop.frontiersin.org/images/profile/701103/203",
+          link: "https://otieu.com/4/9972345"
+        },
+        {
+          name: "রুহুল আমিন",
+          text: "মাত্রই মেসেঞ্জারে শেয়ার করে জিতলাম!",
+          img: "https://randomuser.me/api/portraits/men/55.jpg",
+          link: "https://otieu.com/4/9972345"
+        },
+        {
+          name: "Porshi",
+          text: "এই অফার একদম legit!",
+          img: "https://images.pexels.com/photos/20205469/pexels-photo-20205469.jpeg?cs=srgb&dl=pexels-s-n-ng-c-459229402-20205469.jpg&fm=jpg",
+          link: "https://otieu.com/4/9972345"
+        },
+        {
+          name: "Shumon",
+          text: "বেশি বেশি শেয়ার করলেই লটারি জেতার সম্ভাবনা ভালো থাকে।",
+          img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          link: "https://otieu.com/4/9972345"
+        }
+      ];
+
+      let notifIndex = 0;
+
+      function showTopNotification() {
+        const notification = document.getElementById("topNotification");
+        const img = document.getElementById("notifImg");
+        const text = document.getElementById("notifText");
+        const btn = document.getElementById("notifBtn");
+        const beep = document.getElementById("beepSound");
+
+        const data = notifMessages[notifIndex];
+
+        img.src = data.img;
+        text.innerHTML = `<strong> ${data.name} বললেন:</strong> ${data.text}`;
+        btn.href = data.link;
+
+        notification.style.display = "flex";
+
+        // 🔔 Play sound
+        if (beep) beep.play().catch(() => {});
+        if ("vibrate" in navigator) navigator.vibrate([100, 50, 100]);
+
+        // ⏱️ Hide after 6 seconds
+        setTimeout(() => {
+          notification.style.display = "none";
+        }, 10000);
+
+        notifIndex = (notifIndex + 1) % notifMessages.length;
+      }
+
+      function hideNotification() {
+        document.getElementById("topNotification").style.display = "none";
+      }
+
+      setTimeout(showTopNotification, 4000); // প্রথমে ৮ সেকেন্ড পরে
+      setInterval(showTopNotification, 20000); // তারপর প্রতি ৩০ সেকেন্ডে
+
+
+
+      function increaseFakeCount(id, base, max) {
+        let el = document.getElementById(id);
+        let count = base;
+        setInterval(() => {
+          if (Math.random() > 0.6 && count < max) {
+            count += Math.floor(Math.random() * 10);
+            el.innerText = count.toLocaleString() + (id==='likeCount' ? '' : '');
+          }
+        }, 1000);
+      }
+
+      function updateViewersLive() {
+        const el = document.getElementById("viewerCount");
+        setInterval(() => {
+          let newView = 3750 + Math.floor(Math.random() * 400);
+          el.innerText = newView;
+        }, 1500);
+      }
+
+      function floatingNotification() {
+        const notify = document.getElementById("floatingNotify");
+        const names = ["Tanvir", "Sadia", "Rahim", "Nadia", "Shuvo"];
+        setInterval(() => {
+          const name = names[Math.floor(Math.random() * names.length)];
+          const emojis = ["❤️", "😮", "👍"];
+          notify.innerText = `${name} just reacted ${emojis[Math.floor(Math.random() * emojis.length)]}`;
+          notify.style.display = "block";
+          setTimeout(() => {
+            notify.style.display = "none";
+          }, 2000);
+        }, 7000);
+      }
+
+      increaseFakeCount("likeCount", 267380,369380);
+      increaseFakeCount("commentCount", 30478, 40578);
+      increaseFakeCount("shareCount", 786398, 896398);
+      updateViewersLive();
+      floatingNotification();
+
+      document.getElementById("mainLikeBtn").addEventListener("click", function () {
+        const likeText = document.getElementById("likeText");
+        const likeCount = document.getElementById("likeCount");
+        let count = parseInt(likeCount.innerText.replace(/,/g, ''));
+
+        if (likeText.innerText === "Like") {
+          likeText.innerText = "Liked";
+          likeText.style.color = "#1877f2";
+          count++;
+          likeCount.innerText = `You and ${count.toLocaleString()} others liked this`;
+        } else {
+          likeText.innerText = "Like";
+          likeText.style.color = "";
+          likeCount.innerText = `${(count - 1).toLocaleString()}`;
+        }
+      });
+
+
+
+      // পেজ লোড ইভেন্ট
+      window.onload = function () {
+        startTimer();
+        cycleComments();
+        setupCommentEvents();
+
+        // এন্টার প্রেসে কমেন্ট পোস্ট
+        document
+          .getElementById("newComment")
+          .addEventListener("keypress", function (e) {
+            if (e.key === "Enter") postComment();
+          });
+
+        // প্রাথমিক কমেন্টে ইভেন্ট বাইন্ডিং
+        document.querySelectorAll(".comment").forEach((comment) => {
+          const likeBtn = comment.querySelector(".like-btn");
+          const replyBtn = comment.querySelector(".reply-btn");
+
+          if (likeBtn)
+            likeBtn.addEventListener("click", function () {
+              likeComment(this);
+            });
+          if (replyBtn)
+            replyBtn.addEventListener("click", function () {
+              toggleReply(this);
+            });
+        });
+      };
+    </script>
+  </body>
+</html>
